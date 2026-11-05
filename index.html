@@ -100,12 +100,812 @@
 <section class="careers" id="careers"><div class="container"><div class="careers-panel">
   <div><span class="eyebrow">Careers at Valued</span><h2>Bring your experience. Make a meaningful contribution.</h2><p>Interested in opportunities with Valued Services? Contact our staffing team to ask about current application opportunities and the roles they are considering.</p></div>
   <a class="btn" href="mailto:Staffing@valuedsvcs.com?subject=Career%20Opportunity%20Inquiry">Contact staffing <span class="arrow">→</span></a>
-</div></div></section>
+</div>
+<div style="margin-top: 40px;">
+<section class="application-section">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    .application-section {
+      width: 100%;
+      font-family: 'DM Sans', Arial, sans-serif;
+      color: #12365A;
+      box-sizing: border-box;
+    }
+
+    .application-section *,
+    .application-section *::before,
+    .application-section *::after {
+      box-sizing: border-box;
+      font-family: 'DM Sans', Arial, sans-serif;
+    }
+
+    .application-heading {
+      margin-bottom: 28px;
+    }
+
+    .application-heading h2 {
+      color: #111111;
+      font-size: 25px;
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    .application-heading p {
+      color: #111111;
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .application-security-note {
+      margin-top: 12px;
+      color: #5D6875;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .application-form {
+      width: 100%;
+      padding: 48px 52px;
+      background: #F6F6F6;
+      border-radius: 2px;
+    }
+
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .application-grid.three-columns {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .application-field {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .application-field.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .application-field input,
+    .application-field select {
+      width: 100%;
+      height: 76px;
+      padding: 0 14px;
+      border: 1px solid #D7D7D7;
+      border-radius: 9px;
+      background: transparent;
+      color: #12365A;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+    }
+
+    .application-field input::placeholder {
+      color: #12365A;
+      opacity: 1;
+    }
+
+    .application-field input:focus,
+    .application-field select:focus {
+      border-color: #1769E8;
+      box-shadow: 0 0 0 2px rgba(23, 105, 232, 0.10);
+    }
+
+    .phone-field {
+      display: flex;
+      height: 76px;
+      border: 1px solid #D7D7D7;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .phone-field select {
+      width: 90px;
+      height: 100%;
+      padding: 0 8px;
+      border: 0;
+      border-radius: 0;
+      background: #E9ECEF;
+      color: #12365A;
+      font-size: 14px;
+    }
+
+    .phone-field input {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .phone-field:focus-within {
+      border-color: #1769E8;
+      box-shadow: 0 0 0 2px rgba(23, 105, 232, 0.10);
+    }
+
+    .state-field {
+      min-height: 76px;
+      padding: 9px 14px;
+      border: 1px solid #D7D7D7;
+      border-radius: 9px;
+      background: #FFFFFF;
+    }
+
+    .state-field label {
+      display: block;
+      margin-bottom: 3px;
+      color: #7A8491;
+      font-size: 13px;
+    }
+
+    .state-field select {
+      width: 100%;
+      height: 39px;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      font-size: 16px;
+      color: #12365A;
+    }
+
+    .position-group {
+      margin: 18px 0 20px;
+    }
+
+    .position-title {
+      display: block;
+      color: #12365A;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .position-options {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 20px;
+      row-gap: 24px;
+    }
+
+    .position-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #12365A;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .position-option input,
+    .consent-row input {
+      width: 15px;
+      height: 15px;
+      margin: 0 8px 0 3px;
+      accent-color: #1769E8;
+      flex-shrink: 0;
+    }
+
+    .position-error {
+      color: #F04444;
+      font-size: 14px;
+      margin-top: 16px;
+      min-height: 18px;
+    }
+
+    .resume-title {
+      display: block;
+      margin: 22px 0 14px;
+      color: #12365A;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .resume-title small {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .resume-field {
+      width: 100%;
+      min-height: 50px;
+      padding: 6px;
+      border: 1px solid #D7D7D7;
+      border-radius: 9px;
+      background: transparent;
+      color: #12365A;
+      font-size: 15px;
+    }
+
+    .resume-field::file-selector-button {
+      padding: 9px 14px;
+      margin-right: 12px;
+      border: 1px solid #D7D7D7;
+      background: #E9ECEF;
+      color: #12365A;
+      font-family: 'DM Sans', Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .consent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      margin: 22px 0;
+      color: #12365A;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .consent-row input {
+      margin-top: 5px;
+    }
+
+    .consent-row a {
+      color: #1769E8;
+      text-decoration: underline;
+    }
+
+    .application-submit {
+      display: block;
+      width: 100%;
+      min-height: 61px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 5px;
+      background: #1769F5;
+      color: #FFFFFF;
+      font-size: 21px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .application-submit:hover {
+      background: #1057D1;
+    }
+
+    .application-submit:focus-visible {
+      outline: 3px solid #12365A;
+      outline-offset: 3px;
+    }
+
+    .application-section .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 700px) {
+      .application-form {
+        padding: 24px 16px;
+      }
+
+      .application-grid,
+      .application-grid.three-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .application-field.full-width {
+        grid-column: auto;
+      }
+
+      .position-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 20px;
+      }
+
+      .application-heading h2 {
+        font-size: 23px;
+      }
+
+      .application-heading p {
+        font-size: 15px;
+      }
+
+      .application-field input,
+      .application-field select,
+      .phone-field {
+        height: 64px;
+      }
+
+      .state-field {
+        min-height: 76px;
+      }
+
+      .state-field select {
+        height: 39px;
+      }
+
+      .application-submit {
+        font-size: 19px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .position-options {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+      }
+    }
+  </style>
+
+  <div class="application-heading">
+    <h2>Join Our Team Today</h2>
+
+    <p>
+      Kindly fill out the form below to apply and take the next step
+      toward flexible healthcare assignments.
+    </p>
+
+    <div class="application-security-note">
+      For your security, please do not submit your Social Security Number
+      or sensitive medical information through this form.
+    </div>
+  </div>
+
+  <!-- Applications are forwarded to Staffing@valuedsvcs.com through FormSubmit. -->
+  <form
+    class="application-form"
+    id="healthcareApplicationForm"
+    action="https://formsubmit.app/f/3487spb9hs"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+
+    <!-- FormSubmit email settings -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Healthcare Job Application - Valued Services"
+    >
+
+    <input
+      type="hidden"
+      name="_template"
+      value="table"
+    >
+
+    <!-- Record the exact page URL that submitted this application. -->
+    <input type="hidden" name="_url" value="">
+
+    <!-- Spam honeypot -->
+    <input
+      type="text"
+      name="_honey"
+      style="display:none"
+      tabindex="-1"
+      autocomplete="off"
+    >
+
+    <!-- Full Name -->
+    <div class="application-grid">
+      <div class="application-field full-width">
+        <label class="sr-only" for="appFullName">Full Name</label>
+        <input
+          type="text"
+          id="appFullName"
+          name="full_name"
+          placeholder="Full Name"
+          autocomplete="name"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- Phone and Email -->
+    <div class="application-grid">
+      <div class="application-field">
+        <div class="phone-field">
+          <select
+            name="country_code"
+            aria-label="Country code"
+            required
+          >
+            <option value="+1">🇺🇸 +1</option>
+          </select>
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            autocomplete="tel"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="application-field">
+        <label class="sr-only" for="appEmail">Email Address</label>
+        <input
+          type="email"
+          id="appEmail"
+          name="email"
+          placeholder="Email Address"
+          autocomplete="email"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- Home Address -->
+    <div class="application-grid">
+      <div class="application-field full-width">
+        <label class="sr-only" for="appAddress">Home Address</label>
+        <input
+          type="text"
+          id="appAddress"
+          name="home_address"
+          placeholder="Home Address"
+          autocomplete="street-address"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- State, City, Zip -->
+    <div class="application-grid three-columns">
+
+      <div class="application-field state-field">
+        <label for="appState">State</label>
+
+        <select id="appState" name="state" required>
+          <option value="">Please select state.</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Idaho">Idaho</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Iowa">Iowa</option>
+          <option value="Kansas">Kansas</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Louisiana">Louisiana</option>
+          <option value="Maine">Maine</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Massachusetts">Massachusetts</option>
+          <option value="Michigan">Michigan</option>
+          <option value="Minnesota">Minnesota</option>
+          <option value="Mississippi">Mississippi</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Montana">Montana</option>
+          <option value="Nebraska">Nebraska</option>
+          <option value="Nevada">Nevada</option>
+          <option value="New Hampshire">New Hampshire</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New Mexico">New Mexico</option>
+          <option value="New York">New York</option>
+          <option value="North Carolina">North Carolina</option>
+          <option value="North Dakota">North Dakota</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Oklahoma">Oklahoma</option>
+          <option value="Oregon">Oregon</option>
+          <option value="Pennsylvania">Pennsylvania</option>
+          <option value="Rhode Island">Rhode Island</option>
+          <option value="South Carolina">South Carolina</option>
+          <option value="South Dakota">South Dakota</option>
+          <option value="Tennessee">Tennessee</option>
+          <option value="Texas">Texas</option>
+          <option value="Utah">Utah</option>
+          <option value="Vermont">Vermont</option>
+          <option value="Virginia">Virginia</option>
+          <option value="Washington">Washington</option>
+          <option value="West Virginia">West Virginia</option>
+          <option value="Wisconsin">Wisconsin</option>
+          <option value="Wyoming">Wyoming</option>
+          <option value="District of Columbia">District of Columbia</option>
+        </select>
+      </div>
+
+      <div class="application-field">
+        <label class="sr-only" for="appCity">City</label>
+        <input
+          type="text"
+          id="appCity"
+          name="city"
+          placeholder="City"
+          autocomplete="address-level2"
+          required
+        >
+      </div>
+
+      <div class="application-field">
+        <label class="sr-only" for="appZip">Zip Code</label>
+        <input
+          type="text"
+          id="appZip"
+          name="zip_code"
+          placeholder="Zip Code"
+          autocomplete="postal-code"
+          required
+        >
+      </div>
+
+    </div>
+
+    <!-- Position Applying For -->
+    <div
+      class="position-group"
+      role="group"
+      aria-labelledby="positionGroupTitle"
+      aria-describedby="positionError"
+    >
+      <span class="position-title" id="positionGroupTitle">
+        Position Applying For (Select at least one)
+      </span>
+
+      <div class="position-options">
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="RN">
+          RN
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="LPN">
+          LPN
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="CNA">
+          CNA
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="GNA">
+          GNA
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="PSR">
+          PSR
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="MA">
+          MA
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="SPT">
+          SPT
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="RT">
+          RT
+        </label>
+
+        <label class="position-option">
+          <input type="checkbox" name="positions[]" value="Other">
+          Other
+        </label>
+
+      </div>
+
+      <div
+        class="position-error"
+        id="positionError"
+        aria-live="polite"
+      ></div>
+    </div>
+
+    <!-- Years of Experience -->
+    <div class="application-grid">
+      <div class="application-field full-width">
+        <label class="sr-only" for="appExperience">
+          Years of Experience
+        </label>
+
+        <input
+          type="number"
+          id="appExperience"
+          name="years_of_experience"
+          placeholder="Years of Experience"
+          min="0"
+          max="60"
+          step="1"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- Availability -->
+    <div class="application-grid">
+      <div class="application-field full-width">
+        <label class="sr-only" for="appAvailability">
+          Availability
+        </label>
+
+        <input
+          type="text"
+          id="appAvailability"
+          name="availability"
+          placeholder="Availability"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- Preferred Shifts -->
+    <div class="application-grid">
+      <div class="application-field full-width">
+        <label class="sr-only" for="appShifts">
+          Preferred Shifts
+        </label>
+
+        <input
+          type="text"
+          id="appShifts"
+          name="preferred_shifts"
+          placeholder="Preferred Shifts"
+          required
+        >
+      </div>
+    </div>
+
+    <!-- Optional Resume Upload -->
+    <label class="resume-title" for="appResume">
+      Upload Resume (Optional)
+      <small>
+        (Accepted formats: .doc, .docx, .pdf | Maximum size: 10MB)
+      </small>
+    </label>
+
+    <input
+      class="resume-field"
+      type="file"
+      id="appResume"
+      name="attachment"
+      accept=".doc,.docx,.pdf"
+    >
+
+    <!-- Privacy Consent -->
+    <label class="consent-row">
+      <input
+        type="checkbox"
+        name="privacy_consent"
+        value="yes"
+        required
+      >
+
+      <span>
+        I consent to the collection, use, and processing of my personal
+        information for the purpose of reviewing and evaluating my
+        employment application. I understand this information will be
+        handled in accordance with the
+        <a
+          href="https://www.valuedsvcs.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Privacy Notice
+        </a>.
+      </span>
+    </label>
+
+    <!-- Submit -->
+    <button class="application-submit" type="submit">
+      Submit »
+    </button>
+
+  </form>
+
+  <script>
+    (function () {
+      const form = document.getElementById("healthcareApplicationForm");
+      if (!form) return;
+
+      const positions = Array.from(
+        form.querySelectorAll('input[name="positions[]"]')
+      );
+      const positionError = form.querySelector("#positionError");
+      const resume = form.querySelector("#appResume");
+      const email = form.querySelector("#appEmail");
+      const sourceUrl = form.querySelector('input[name="_url"]');
+      const submitButton = form.querySelector('button[type="submit"]');
+      const firstPosition = positions[0];
+
+      // FormSubmit uses this value to identify the page the application came from.
+      if (sourceUrl) {
+        sourceUrl.value = window.location.href.split("#")[0];
+      }
+
+      // At least one job position must be selected.
+      function validatePositions() {
+        const selected = positions.some((checkbox) => checkbox.checked);
+        const message = selected
+          ? ""
+          : "Please select at least one position before submitting.";
+
+        if (positionError) positionError.textContent = message;
+        if (firstPosition) firstPosition.setCustomValidity(message);
+        return selected;
+      }
+
+      // Resume is optional. When attached, allow DOC, DOCX, or PDF files below 10 MB.
+      function validateResume() {
+        if (!resume || !resume.files || resume.files.length === 0) {
+          if (resume) resume.setCustomValidity("");
+          return true;
+        }
+
+        const file = resume.files[0];
+        const allowedExtensions = /\.(doc|docx|pdf)$/i;
+        const maxSize = 10 * 1024 * 1024;
+        let message = "";
+
+        if (!allowedExtensions.test(file.name)) {
+          message = "Please upload a DOC, DOCX, or PDF file.";
+        } else if (file.size >= maxSize) {
+          message = "Please upload a resume smaller than 10MB.";
+        }
+
+        resume.setCustomValidity(message);
+        return message === "";
+      }
+
+      positions.forEach((checkbox) => {
+        checkbox.addEventListener("change", validatePositions);
+      });
+
+      if (resume) {
+        resume.addEventListener("change", validateResume);
+      }
+
+      // Keep the normal HTML POST to FormSubmit. Do not use preventDefault/fetch
+      // for valid submissions; the browser must send the multipart form and file.
+      form.addEventListener("submit", function (event) {
+        const positionsValid = validatePositions();
+        const resumeValid = validateResume();
+
+        if (!positionsValid || !resumeValid || !form.checkValidity()) {
+          event.preventDefault();
+          form.reportValidity();
+          return;
+        }
+
+        // Prevent accidental duplicate clicks while the browser sends the form.
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = "Submitting...";
+        }
+      });
+
+      // Keep the email field available to FormSubmit as the applicant's reply-to address.
+      // The submitted field remains named "email" as required by the email form setup.
+      if (email) {
+        email.setAttribute("autocomplete", "email");
+      }
+    })();
+  </script>
+</section>
+</div>
+</div></section>
 
 <section class="section contact" id="contact"><div class="container contact-grid">
   <div class="contact-copy"><span class="eyebrow">Get in touch</span><h2>Let’s start a conversation.</h2><p>Whether you are exploring non-medical home care or looking for healthcare staffing support, contact Valued Services and let us know what you need.</p>
     <div class="contact-details">
-      <div class="contact-detail"><span class="contact-icon" aria-hidden="true">✉</span><span><strong>Email</strong><a href="mailto:info@valuedsvcs.com">info@valuedsvcs.com</a></span></div>
+      <div class="contact-detail"><span class="contact-icon" aria-hidden="true">✉</span><span><strong>Email</strong><a href="mailto:Staffing@valuedsvcs.com">info@valuedsvcs.com</a></span></div>
       <div class="contact-detail"><span class="contact-icon" aria-hidden="true">☎</span><span><strong>Phone</strong><a href="tel:+16024417345">602-441-7345</a></span></div>
       <div class="contact-detail"><span class="contact-icon" aria-hidden="true">⌖</span><span><strong>Office</strong>1616 E. Main Street, Suite 229<br>Mesa, AZ 85203</span></div>
     </div>
